@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz_1</title>
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="CSS/inicio.css">
 </head>
 <body>
     <h3>Nombres: Maria Fabiana Saavedra Gaona - Zary Tatiana Mendez Diaz</h3>
@@ -19,7 +19,7 @@
                 <th>20%</th>
                 <th>40%</th>
                 <th>Definitiva</th>
-                <th>A/NO</th>
+                <th>Aprobado / No Aprobado</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -61,12 +61,17 @@
     </div>
     
     <div>
-        <button type="submit">Guardar</button>
+        <button type="submit" name="Guarda" id="guaradr">Guardar</button>
     </div>
 </form>
     </fieldset>
 </main>
 <br>
-<script src="inicio.js"></script>
+<div id="model" class="modal" style="display:none;">
+    <div class="modal-content">
+      <p>¿Estás seguro de que deseas eliminar este registro?</p>
+      <button id="confirmar">Eliminar</button>
+      <button id="cancelar">Cancelar</button>
+<script src="JS/inicio.js"></script>
 </body>
 </html>

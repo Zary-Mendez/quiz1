@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 1</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+  </head>
+  <body>
+    <h1>Nombres: Maria Fabiana Saavedra Gaona - Zary Tatiana Mendez Diaz</h1>
+<fieldset>
+    <section class="form">
+        <form name="registroForm" id="registro">
+          <div>
+            <label> Codigo:</label>
+            <input type="text" name="codigoInp" required />
+            <div id="codigo"></div>
+          </div>
+          <div>
+            <label> Nombre:</label>
+            <input type="text" name="nombreInp" required />
+            <div id="nombre"></div>
+          </div>
+          <div>
+            <label> 20%:</label>
+            <input type="text" name="nota1Inp" required />
+            <div id="nota1"></div>
+          </div>
+          <div>
+            <label> 20%:</label>
+            <input type="text" name="nota2Inp" required />
+            <div id="nota2"></div>
+          </div>
+          <div>
+            <label> 20%:</label>
+            <input type="text" name="nota3Inp" required />
+            <div id="nota3"></div>
+          </div>
+          <div>
+            <label> 40%:</label>
+            <input type="text" name="nota4Inp" required />
+            <div id="nota4"></div>
+          </div>
+          <div>
+            <button type="submit" name="Guarda" id="guardar" class="guardar-b">Guardar</button>
+          </div>
+        </form>
+      </section>
+</fieldset>
+
+<section class="board">
+    <table border=2" id="estudiantes">
+    <thead>
+      <tr>
+        <th>   </th>
+        <th>Codigo</th>
+        <th>Nombre</th>
+        <th>20%</th>
+        <th>20%</th>
+        <th>20%</th>
+        <th>40%</th>
+        <th>Definitiva</th>
+        <th>Aprobado / No Aprobado</th>
+      </tr>
+    </thead>
+    <main>
+        <tr>
+           
+        </tr>
+    </main>
+  </table>
+</section>
+
+
+<div id="codigomsg" class="codigomsg" style="display:none;">
+  <div class="codigomsg-content" > 
+  <p>EL CÓDIGO YA EXISTE</p>
+  <button id="cerrarCodigomsg">X</button>
+
+</div>
+</div>
+
+
+<div id="model" class="modal" style="display:none;">
+  <div class="modal-content">
+    <p>¿Estás seguro de que deseas eliminar este registro?</p>
+    <button id="confirmar" class="confirmar">Eliminar</button>
+    <button id="cancelar"class="cancelar">Cancelar</button>
+    
+  </div>
+</div>
+    <script src="JS/index.js"></script>
+  </body>
+</html>

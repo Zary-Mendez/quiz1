@@ -1,6 +1,7 @@
 const registroForm = document.forms["registroForm"]
 const codigomsg = document.getElementById("codigomsg")
-const codigosViejos = []
+const validarMsg = document.getElementById('validarMsg')
+const codigosRegistrados = []
 const modalmsg = document.getElementById("modalmsg")
 const codigoInp = registroForm["codigoInp"]
 const notasEstudiantes = document.getElementById("notasEstudiantes")
@@ -88,13 +89,25 @@ registroForm.addEventListener("submit", (event) => {
   const nuevoCodigo = registroForm["codigoInp"].value
 
   
-  if (codigosViejos[nuevoCodigo]) {
+  if (codigosRegistrados[nuevoCodigo]) {
       codigomsg.style.display = 'block'
       return
   }
+  const notas = [
+    parseFloat(registroForm["nota1Inp"].value),
+    parseFloat(registroForm["nota2Inp"].value),
+    parseFloat(registroForm["nota3Inp"].value),
+    parseFloat(registroForm["nota4Inp"].value),
+  ];
 
+  for (let nota of notas) {
+    if (isNaN(nota) || nota < 0 || nota > 5) {
+      validarMsg.style.display='block'
+      return;
+    }
+  }
   
-  codigosViejos[nuevoCodigo] = true
+  codigosRegistrados[nuevoCodigo] = true
 
   const nota = {
       codigo: nuevoCodigo,
@@ -109,7 +122,7 @@ registroForm.addEventListener("submit", (event) => {
 })
 
 
-document.getElementById("cerrarCodigomsg").addEventListener("click", () => {
+document.getElementById("errorCodigo").addEventListener("click", () => {
   codigomsg.style.display = 'none'
 })
 
@@ -117,7 +130,7 @@ document.getElementById("cerrarCodigomsg").addEventListener("click", () => {
   botonConfirmar.addEventListener("click", () => {
     if (filaEliminar) {
       filaEliminar.remove()
-      delete codigosViejos[codigoAEliminar]
+      delete codigosRegistrados[codigoAEliminar]
       filaEliminar = null
       codigoAEliminar = null
     }

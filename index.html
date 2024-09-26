@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="CSS/index.css" />
   </head>
   <body>
+    <h2>        </h2>
     <h1>Nombres: Maria Fabiana Saavedra Gaona - Zary Tatiana Mendez Diaz</h1>
 <fieldset>
     <section class="form">
@@ -22,22 +23,22 @@
             <div id="nombre"></div>
           </div>
           <div>
-            <label> 20%:</label>
+            <label> Calificación 1 (20%):</label>
             <input type="text" name="nota1Inp" required />
             <div id="nota1"></div>
           </div>
           <div>
-            <label> 20%:</label>
+            <label>  Calificación 2 (20%):</label>
             <input type="text" name="nota2Inp" required />
             <div id="nota2"></div>
           </div>
           <div>
-            <label> 20%:</label>
+            <label> Calificación 3 (20%):</label>
             <input type="text" name="nota3Inp" required />
             <div id="nota3"></div>
           </div>
           <div>
-            <label> 40%:</label>
+            <label> Calificación 4 (40%):</label>
             <input type="text" name="nota4Inp" required />
             <div id="nota4"></div>
           </div>
@@ -74,16 +75,21 @@
 
 <div id="codigomsg" class="codigomsg" style="display:none;">
   <div class="codigomsg-content" > 
-  <p>EL CÓDIGO YA EXISTE</p>
-  <button id="cerrarCodigomsg">X</button>
-
+  <p>¡ACABAS DE INGRESAR UN CODIGO EXISTENTE!</p>
+  <button id="errorCodigo">OK</button>
+  </div>
 </div>
-</div>
 
+<div id="validarMsg" class="validarMsg" style="display: none;">
+  <div>
+  <p> Las calificaciones deben estar entre 0.0 y 5.0</p>
+  <button id="errorNota">OK</button>
+  </div>
+</div>
 
 <div id="model" class="modal" style="display:none;">
   <div class="modal-content">
-    <p>¿Estás seguro de que deseas eliminar este registro?</p>
+    <p>¿Deseas eliminar este registro?</p>
     <button id="confirmar" class="confirmar">Eliminar</button>
     <button id="cancelar"class="cancelar">Cancelar</button>
     

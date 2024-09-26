@@ -130,22 +130,16 @@ table th {
 .codigomsg-content {
     position:fixed; 
     top:50%; 
-    left:50%; 
-    transform:translate(-50%, -50%); 
-    background-color:#f8e4f8; 
-    padding:20px; 
+    left:50%;
+    transform:translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
     text-align: center;
     border-radius: 100px;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
 }
-.codigomsg button {
-    background-color: #b885f3;
-    border: 1px;
-    padding: 5px 10px;
-    border-radius: 100px;
-    cursor: pointer;
-}
+
 
 .modal {
     position: fixed;

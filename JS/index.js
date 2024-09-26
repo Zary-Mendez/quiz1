@@ -103,7 +103,7 @@ registroForm.addEventListener("submit", (event) => {
   for (let nota of notas) {
     if (isNaN(nota) || nota < 0 || nota > 5) {
       validarMsg.style.display='block'
-      return;
+      return
     }
   }
   
